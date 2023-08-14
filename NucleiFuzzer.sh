@@ -70,7 +70,7 @@ fi
 
 # Step 3: Get the vulnerable parameters of the given domain name using ParamSpider tool and save the output into a text file
 echo "Running ParamSpider on $domain"
-python3 "$home_dir/ParamSpider/paramspider.py" -d "$domain" --exclude png,jpg,gif,jpeg,swf,woff,gif,svg --level high --quiet -o $domain-paramspider_output.txt
+python3 "$home_dir/ParamSpider/paramspider/main.py" -d "$domain" --exclude png,jpg,gif,jpeg,swf,woff,gif,svg --level high --quiet -o $domain-paramspider_output.txt
 
 # Check whether URLs were collected or not
 if [ ! -s output/$domain-paramspider_output.txt ]; then
